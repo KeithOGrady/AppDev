@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Testing!</h1>
+  <table>
+    <th>Table Name</th>
+    <tr>
+      <th>Name</th>
+      <th>Data</th>
+      <th>Paid</th>
+    </tr>
+    <tr *ngFor="let row of rows">
+      <td>{{row.name}}</td>
+      <td>{{row.data}}</td>
+      <td>{{row.paid}}</td>
+    </tr>
+  </table>
+
+  
+
+  </ion-content>
+<br/>
+
+  <input [(ngModel)]="name" placeholder="Name" type="text"/>
+  <button (click)="updateName()">Add Name</button>
+
+  <br/>
+  {{name}}
+  {{rows}}
+</ion-content>
